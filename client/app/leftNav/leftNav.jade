@@ -1,0 +1,7 @@
+.well
+  ul.nav
+    li.nav-header.left-nav-header
+      span Models list
+      button.btn.btn-default.glyphicon.glyphicon-plus.pull-right(type="button", ui-sref="createModel")
+    li(ng-repeat="model in models")
+      a(href='#') {{model.name}}

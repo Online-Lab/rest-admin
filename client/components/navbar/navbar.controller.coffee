@@ -5,9 +5,13 @@ angular.module 'restAdminApp'
   $scope.menu = [
     title: 'Home'
     link: '/'
+    show: () ->
+      return true
   ,
     title: 'Models'
     link: '/models'
+    show: () ->
+      return $scope.isLoggedIn()
   ]
   $scope.isCollapsed = true
   $scope.isLoggedIn = Auth.isLoggedIn
